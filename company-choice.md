@@ -6,13 +6,21 @@ Elijo HealthCore porque combina la atención sanitaria con retos de automatizaci
 
 ## Departamentos que más me interesan
 
-- **Cumplimiento y Gobierno del Dato:** los registros de acceso a los dos sistemas EHR se mantienen por separado, las pistas de auditoría están incompletas y la recopilación de datos para responder solicitudes de pacientes requiere trabajo manual.
-- **Experiencia del Paciente y Acceso:** no existe una plataforma de reservas online compartida ni contacto proactivo para pacientes que podrían faltar a sus citas; la tasa de no-shows de la red es del 22 %.
+- **Cumplimiento y Gobierno del Dato:** los registros de acceso a los dos sistemas EHR se mantienen por separado, las pistas de auditoría están incompletas y las solicitudes de datos requieren trabajo manual. Me interesa este departamento porque conecta la privacidad y el cumplimiento con controles, evidencias y gobernanza de datos que pueden diseñarse y medirse.
+- **Experiencia del Paciente y Acceso:** no hay una plataforma compartida de reservas online ni contacto proactivo para pacientes con riesgo de faltar; la tasa de no-shows de la red es del 22 %. Me interesa porque combina automatización práctica con una mejora medible del acceso y de la experiencia del paciente.
 
-## Reto de automatización que quiero explorar
+## Reto de automatización con IA que quiero explorar
 
-Quiero explorar la predicción de citas con riesgo de inasistencia y el seguimiento proactivo para ayudar al paciente a confirmar o reprogramar su cita, reduciendo huecos de agenda y mejorando su acceso a la atención.
+**Área del roadmap: Experiencia del Paciente y Acceso.** El briefing propone predecir las citas con riesgo de inasistencia y facilitar el contacto proactivo para recordar o reprogramar. Quiero explorar un sistema que priorice esas citas para revisión del personal y sugiera el seguimiento adecuado. Es un reto concreto porque HealthCore estima que los no-shows representan aproximadamente 1,8 millones de dólares anuales en huecos de cita perdidos.
 
 ## My AI Agent Idea
 
-El agente analizaría información de agenda y asistencia anterior, sede, horario y respuesta a recordatorios para identificar citas que podrían terminar en inasistencia. Necesitaría solo los datos necesarios para esa tarea, con controles de acceso y registros de actividad adecuados a HIPAA y UK GDPR. Produciría una lista priorizada de citas con los factores que explican cada alerta y sugeriría una acción, como enviar un recordatorio o pedir al equipo que contacte al paciente. El personal de HealthCore revisaría las alertas y decidiría el seguimiento; el agente no tomaría decisiones clínicas ni cancelaría citas por su cuenta.
+**Purpose and users:** A decision-support agent for HealthCore’s patient-access staff that identifies appointments at higher risk of becoming no-shows and recommends timely follow-up.
+
+**Trigger:** The agent runs when the appointment schedule is updated and again 48 hours before an appointment. The 48-hour timing is a proposed workflow, not a current HealthCore policy.
+
+**Information needed:** Appointment time, clinic, appointment type, prior attendance history, and responses to previous reminders. It should use only the minimum information needed, with role-based access and access logs appropriate to HIPAA and UK GDPR.
+
+**What it does and produces:** It estimates risk, explains the main factors behind each alert, and creates a prioritized review queue with a suggested action, such as sending an approved reminder or asking staff to contact the patient.
+
+**Human review:** Authorized staff review and approve outreach or rescheduling. The agent does not cancel appointments, change clinical plans, or make clinical decisions on its own; staff can correct its suggestions and record the outcome.
