@@ -34,5 +34,6 @@
 - No se crea código de aplicación ni se declaran stacks, comandos o políticas regulatorias que no estén demostrados.
 - Commit de entrega en GitHub: `2aa72f1` (`Add HealthCore agent context and reusable skill`); el árbol remoto fue cotejado y coincide con el commit local `4241816`.
 - Rama publicada: `feature/agent-memory-bank`. El `git push` desde terminal no pudo autenticar; la misma rama y los seis archivos se publicaron mediante la conexión autenticada de GitHub.
-- Pull Request abierta contra `main`: [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2). No se ha fusionado.
+- La PR [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2) se fusionó en `main` en `f85d321` (16/11/2026 20:10:50 UTC). No ejecuté la operación de merge; el estado se comprobó después en GitHub.
+- La corrección posterior de procedencia está en la rama publicada y en la PR de seguimiento [#3](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/3), abierta contra `main` y sin fusionar.
 - Pendiente para el siguiente hito: definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
