@@ -32,4 +32,7 @@
 
 - Se conserva `BRIEFING.md`, `CONTEXT.es.md`, `CONTEXT.md` y el resto de la plantilla sin reescrituras. El `CONTEXT.md` y el README raíz aún muestran texto genérico heredado; la documentación de este hito declara las fuentes HealthCore aplicables y el límite de procedencia.
 - No se crea código de aplicación ni se declaran stacks, comandos o políticas regulatorias que no estén demostrados.
-- Pendiente: crear el commit, publicar `feature/agent-memory-bank` y abrir una PR hacia `main`.
+- Commit de entrega en GitHub: `2aa72f1` (`Add HealthCore agent context and reusable skill`); el árbol remoto fue cotejado y coincide con el commit local `4241816`.
+- Rama publicada: `feature/agent-memory-bank`. El `git push` desde terminal no pudo autenticar; la misma rama y los seis archivos se publicaron mediante la conexión autenticada de GitHub.
+- Pull Request abierta contra `main`: [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2). No se ha fusionado.
+- Pendiente para el siguiente hito: obtener el archivo original de `00-general-contexts` para cotejar la procedencia exacta del briefing; definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
