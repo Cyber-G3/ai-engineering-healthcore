@@ -31,4 +31,4 @@ El briefing presenta necesidades y oportunidades por departamento, no una hoja d
 
 **Decisión de trabajo:** usar el briefing raíz y el contexto español como fuentes de dominio; tratar el score de inasistencia solo como señal para revisión humana.
 
-**Pendiente:** cotejar `BRIEFING.md` con el archivo original de `00-general-contexts`. Esa carpeta/fuente no está incluida en este clon. La copia actual es completa y el historial Git la atribuye al commit `319f273` («Add HealthCore company briefing»), pero no se puede verificar aquí una comparación byte a byte con el original.
+**Procedencia verificada:** el original está en [`content/contexts/00-general-contexts/healthcore-BRIEFING.es.md`](https://github.com/4GeeksAcademy/ai-engineering-syllabus/blob/fd2da034894ba93ba738559280ccde074ab1d953/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md). El blob Git de esa fuente y el de `BRIEFING.md` en este repositorio son idénticos (`5158cf167c0e61238bbd5ab023b5364fce92106d`), por lo que el contenido y el idioma ya coinciden exactamente. El historial local registra `319f273 Add HealthCore company briefing`.

@@ -4,7 +4,7 @@
 
 - Repositorio: `Cyber-G3/ai-engineering-healthcore`; remoto `origin` apunta a ese fork. La rama base era `main` y el clon estaba limpio al inicio.
 - Empresa elegida confirmada: HealthCore, según `company-choice.md`; `BRIEFING.md` contiene el briefing completo y específico de la red de clínicas de EE. UU. y Reino Unido.
-- El archivo fuente original bajo `00-general-contexts` no está incluido en el clon. El historial registra `319f273 Add HealthCore company briefing`; la comparación con la fuente original queda pendiente.
+- El original se localizó en [`4GeeksAcademy/ai-engineering-syllabus/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md`](https://github.com/4GeeksAcademy/ai-engineering-syllabus/blob/fd2da034894ba93ba738559280ccde074ab1d953/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md). Su blob SHA coincide exactamente con el de `BRIEFING.md` (`5158cf167c0e61238bbd5ab023b5364fce92106d`). El historial local registra `319f273 Add HealthCore company briefing`.
 - La plantilla describe los destinos `uis/website`, `uis/backoffice` y `services/`; no se encontraron aplicaciones ni scripts globales.
 - Los README de carpeta recomiendan documentar componentes, no exponer datos sensibles y usar datos sintéticos/anonimizados en evaluación.
 
@@ -19,7 +19,7 @@
 ## Verificaciones
 
 - Inspección de rama, estado y remoto: al inicio, clon limpio en `main` siguiendo `origin/main`; se creó `feature/agent-memory-bank` desde esa base.
-- Briefing: comprobado como contenido completo de HealthCore; no es placeholder. El historial contiene `319f273 Add HealthCore company briefing`. No cotejado byte a byte con `00-general-contexts`, que no está disponible en este clon ni en los directorios locales inspeccionados.
+- Briefing: comprobado como contenido completo de HealthCore; no es placeholder. Cotejado con la fuente oficial en `4GeeksAcademy/ai-engineering-syllabus/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md`; ambos archivos tienen el mismo blob SHA `5158cf167c0e61238bbd5ab023b5364fce92106d`.
 - Rutas de producto: contrastadas con `uis/README.es.md` (sitio público y backoffice) y `services/README.es.md` (APIs y workers). No se crearon aplicaciones ni carpetas de producto.
 - AGENTS: revisión manual confirma lectura inicial de briefing/memoria/reglas, inspección de README/código, cinco pasos ordenados antes del commit y condiciones concretas de consulta.
 - Regla: revisión manual confirma alcance explícito siempre activo y convenciones/condiciones de parada ligadas a HealthCore.
@@ -35,4 +35,4 @@
 - Commit de entrega en GitHub: `2aa72f1` (`Add HealthCore agent context and reusable skill`); el árbol remoto fue cotejado y coincide con el commit local `4241816`.
 - Rama publicada: `feature/agent-memory-bank`. El `git push` desde terminal no pudo autenticar; la misma rama y los seis archivos se publicaron mediante la conexión autenticada de GitHub.
 - Pull Request abierta contra `main`: [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2). No se ha fusionado.
-- Pendiente para el siguiente hito: obtener el archivo original de `00-general-contexts` para cotejar la procedencia exacta del briefing; definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
+- Pendiente para el siguiente hito: definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
