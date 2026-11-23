@@ -12,6 +12,16 @@ npx --yes http-server . -p 3000 -a 0.0.0.0
 
 Abre `http://localhost:3000`. En Codespaces, reenvía el puerto 3000 y cambia su visibilidad a **Public** si necesitas una URL accesible para revisión externa.
 
+## Vista pública
+
+GitHub Pages publica la carpeta `uis/website` desde la rama `feature/healthcore-public-website` mediante el workflow de GitHub Actions:
+
+- Sitio: https://cyber-g3.github.io/ai-engineering-healthcore/
+- PageSpeed móvil (Lighthouse): https://pagespeed.web.dev/analysis/https-cyber-g3-github-io-ai-engineering-healthcore/iv5hpfps2k?form_factor=mobile
+- PageSpeed escritorio (Lighthouse): https://pagespeed.web.dev/analysis/https-cyber-g3-github-io-ai-engineering-healthcore/iv5hpfps2k?form_factor=desktop
+
+La publicación de GitHub Pages permite revisar el sitio públicamente. No se generó una URL pública de Codespaces porque la cuenta no tenía cuota disponible.
+
 ## Archivos
 
 - `index.html`: presentación de HealthCore, servicios, ubicaciones y llamadas a la acción.
