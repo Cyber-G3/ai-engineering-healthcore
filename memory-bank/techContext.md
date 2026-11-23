@@ -2,7 +2,7 @@
 
 ## Propósito y estructura del repositorio
 
-Este repositorio es una plantilla de monorepo para el proyecto transversal de AI Engineering de 4Geeks, personalizada para HealthCore. El mapa de carpetas está documentado en [README.es.md](../README.es.md). La copia actual contiene documentación y estructura base; no se encontró código de aplicaciones desplegable ni un runner global.
+Este repositorio es una plantilla de monorepo para el proyecto transversal de AI Engineering de 4Geeks, personalizada para HealthCore. El mapa de carpetas está documentado en [README.es.md](../README.es.md). La plantilla base contenía documentación y estructura, sin un runner global; ahora `uis/website` incluye el sitio estático de este hito.
 
 | Ruta | Función confirmada por la plantilla | Evidencia |
 | --- | --- | --- |
@@ -16,13 +16,13 @@ Este repositorio es una plantilla de monorepo para el proyecto transversal de AI
 | `./packages`, `./shared` | Paquetes versionables y recursos compartidos no empaquetados | README de cada carpeta |
 | `./docs`, `./infra`, `./scripts`, `./internal` | Documentación transversal, infraestructura, scripts auxiliares y herramientas internas | README de cada carpeta |
 
-No se crearon `uis/website`, `uis/backoffice` ni servicios. Los README reservan esos destinos para futuras implementaciones.
+La plantilla reservaba `uis/website`, `uis/backoffice` y `services/` para futuras implementaciones. Este hito crea únicamente el sitio público en `uis/website`.
 
 ## Stack y herramientas observables
 
 - `.devcontainer/devcontainer.json` especifica una imagen base Ubuntu 24.04, Node.js 22, Python 3.12, Docker outside-of-Docker y GitHub CLI. Esto describe el entorno preparado, no demuestra que ya exista una aplicación con esos stacks.
 - `packages/shared/package.json` identifica un paquete privado `@repo/shared-types` con `index.ts` como entrada/tipos, pero no declara scripts y no se observó runner de workspace en la raíz.
-- El árbol actual contiene README y plantillas; no contiene código de producto que permita confirmar frameworks, bases de datos, endpoints, arquitectura de despliegue o flujos de ejecución.
+- La plantilla no contenía código de producto que permitiera confirmar frameworks, bases de datos, endpoints, arquitectura de despliegue o flujos de ejecución. `uis/website` usa HTML estático, Tailwind CDN y JavaScript Vanilla, según el alcance solicitado para este hito.
 
 ## Comandos y validación
 
@@ -37,3 +37,11 @@ El paquete `packages/shared` declara `"scripts": {}`. Por tanto, para esta infra
 - Los README de datos prohíben implícitamente tratar datos sensibles como fixtures de repositorio: `data/raw/README.es.md` recomienda evitar subirlos y `data/eval/README.es.md` recomienda datos sintéticos o anonimizados.
 - La plantilla no define todavía frameworks de producto, bases de datos, despliegue, CI, arquitectura detallada de servicios ni comandos verificables. Decidirlos solo cuando un hito y sus README/propuesta técnica aporten evidencia.
 - El README raíz conserva referencias de plantilla a `CONTEXT.md` y empresas Brasaland/TrackFlow/Nexova; para el dominio actual, la elección y contexto HealthCore están en `BRIEFING.md`, `company-choice.md` y `CONTEXT.es.md`. No se cambió el README genérico en este hito.
+
+## Sitio web público — estado técnico
+
+- `uis/website/index.html` y `application.html` son páginas estáticas con HTML semántico, clases Tailwind cargadas desde CDN y JavaScript Vanilla.
+- `validation.js` valida nombre, email, teléfono opcional, ubicación y servicio. El envío es simulado y no transmite ni guarda los datos.
+- El briefing no define campos de contacto y el plan aprobado no estaba en los archivos disponibles. Los campos actuales son una propuesta mínima basada en las ubicaciones y servicios confirmados; no solicitan datos clínicos.
+- `validation.test.js` usa Node.js sin dependencias y cubre validaciones, límites, opciones, reset y éxito simulado.
+- El README de `uis/website` documenta ejecución con `npx http-server`. En el entorno de esta revisión, el comando no pudo consultar interfaces de red y no había un Codespace conectado.
