@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7fafc" />
+    <meta
+      name="description"
+      content="Contacta con HealthCore para solicitar información sobre atención primaria, consultas especializadas, salud crónica y programas preventivos."
+    />
+    <title>Solicitar información | HealthCore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#102d3f",
+              ocean: "#0f766e",
+              mint: "#e5f5ef",
+              paper: "#f7fafc",
+            },
+            boxShadow: {
+              card: "0 22px 70px -38px rgba(16, 45, 63, 0.3)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-paper font-sans text-ink antialiased">
+    <a
+      href="#contenido"
+      class="sr-only z-50 rounded-md bg-white px-4 py-3 font-semibold text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:ring-4 focus:ring-ocean"
+    >
+      Saltar al contenido
+    </a>
+
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <a href="index.html" class="inline-flex w-fit items-center gap-3 rounded-md focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean" aria-label="HealthCore, inicio">
+          <span class="grid size-11 place-items-center rounded-2xl bg-ink text-white" aria-hidden="true">
+            <svg viewBox="0 0 32 32" class="size-6" fill="none"><path d="M14 5h4v9h9v4h-9v9h-4v-9H5v-4h9V5Z" fill="currentColor" /></svg>
+          </span>
+          <span>
+            <span class="block text-xl font-bold tracking-tight">HealthCore</span>
+            <span class="block text-xs font-medium tracking-wide text-slate-500">Atención para cada etapa</span>
+          </span>
+        </a>
+        <nav aria-label="Navegación principal" class="flex flex-wrap items-center gap-4 text-sm font-semibold">
+          <a href="index.html#atencion" class="rounded px-2 py-2 text-slate-700 hover:text-ocean focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean">Servicios</a>
+          <a href="index.html#ubicaciones" class="rounded px-2 py-2 text-slate-700 hover:text-ocean focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean">Ubicaciones</a>
+          <a href="index.html" class="rounded px-2 py-2 text-ocean underline decoration-teal-300 underline-offset-4 hover:text-teal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean">Inicio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-16 md:px-10 md:py-20">
+      <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <section aria-labelledby="page-title" class="pt-2">
+          <p class="text-sm font-bold uppercase tracking-[0.16em] text-ocean">Estamos para orientarte</p>
+          <h1 id="page-title" class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Solicita información</h1>
+          <p class="mt-4 text-base leading-7 text-slate-600">Cuéntanos qué servicio y ubicación te interesan. Este formulario es una demostración: no reserva citas, no envía la solicitud ni guarda tus datos.</p>
+          <div class="mt-7 rounded-2xl border border-teal-200 bg-mint p-5">
+            <h2 class="font-bold">Protege tu información</h2>
+            <p class="mt-2 text-sm leading-6 text-slate-700">No incluyas síntomas, diagnósticos, números de historia clínica ni otra información médica. El formulario solo sirve para probar la experiencia.</p>
+          </div>
+          <a href="index.html" class="mt-7 inline-flex items-center gap-2 rounded font-semibold text-ocean underline decoration-teal-300 underline-offset-4 hover:text-teal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean">
+            <span aria-hidden="true">←</span> Volver a HealthCore
+          </a>
+        </section>
+
+        <section aria-labelledby="form-title" class="rounded-3xl border border-slate-200 bg-white p-5 shadow-card sm:p-8">
+          <h2 id="form-title" class="text-xl font-bold">Formulario de contacto</h2>
+          <p class="mt-2 text-sm leading-6 text-slate-600"><span aria-hidden="true">*</span> indica un campo obligatorio.</p>
+
+          <form id="application-form" class="mt-7 space-y-6" novalidate>
+            <fieldset class="space-y-5">
+              <legend class="mb-4 text-base font-bold">Tus datos de contacto</legend>
+
+              <div>
+                <label for="full-name" class="block text-sm font-semibold text-slate-800">Nombre completo <span class="text-rose-700" aria-hidden="true">*</span></label>
+                <input
+                  id="full-name"
+                  name="fullName"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="80"
+                  aria-describedby="full-name-hint full-name-error"
+                  class="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink placeholder:text-slate-500 focus:border-ocean focus:outline-none focus:ring-4 focus:ring-teal-100"
+                  placeholder="Tu nombre y apellidos"
+                />
+                <p id="full-name-hint" class="mt-2 text-xs leading-5 text-slate-600">Escribe entre 2 y 80 caracteres.</p>
+                <p id="full-name-error" class="mt-1 hidden text-sm font-semibold text-rose-800" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-semibold text-slate-800">Correo electrónico <span class="text-rose-700" aria-hidden="true">*</span></label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  required
+                  maxlength="254"
+                  aria-describedby="email-hint email-error"
+                  class="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink placeholder:text-slate-500 focus:border-ocean focus:outline-none focus:ring-4 focus:ring-teal-100"
+                  placeholder="nombre@ejemplo.com"
+                />
+                <p id="email-hint" class="mt-2 text-xs leading-5 text-slate-600">Usaremos este campo solo para simular la validación.</p>
+                <p id="email-error" class="mt-1 hidden text-sm font-semibold text-rose-800" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-slate-800">Teléfono <span class="font-normal text-slate-600">(opcional)</span></label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  aria-describedby="phone-hint phone-error"
+                  class="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink placeholder:text-slate-500 focus:border-ocean focus:outline-none focus:ring-4 focus:ring-teal-100"
+                  placeholder="+1 555 123 4567"
+                />
+                <p id="phone-hint" class="mt-2 text-xs leading-5 text-slate-600">Si lo incluyes, usa entre 7 y 15 dígitos. Se permiten +, espacios, paréntesis, puntos y guiones.</p>
+                <p id="phone-error" class="mt-1 hidden text-sm font-semibold text-rose-800" aria-live="polite"></p>
+              </div>
+            </fieldset>
+
+            <fieldset class="space-y-5 border-t border-slate-200 pt-6">
+              <legend class="mb-4 text-base font-bold">¿Qué información buscas?</legend>
+
+              <div>
+                <label for="location" class="block text-sm font-semibold text-slate-800">Ubicación de interés <span class="text-rose-700" aria-hidden="true">*</span></label>
+                <select
+                  id="location"
+                  name="location"
+                  required
+                  aria-describedby="location-hint location-error"
+                  class="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink focus:border-ocean focus:outline-none focus:ring-4 focus:ring-teal-100"
+                >
+                  <option value="">Selecciona una ubicación</option>
+                  <option value="texas">Texas</option>
+                  <option value="florida">Florida</option>
+                  <option value="georgia">Georgia</option>
+                  <option value="london">Londres</option>
+                  <option value="manchester">Mánchester</option>
+                </select>
+                <p id="location-hint" class="mt-2 text-xs leading-5 text-slate-600">HealthCore tiene clínicas en estas áreas.</p>
+                <p id="location-error" class="mt-1 hidden text-sm font-semibold text-rose-800" aria-live="polite"></p>
+              </div>
+
+              <div>
+                <label for="service" class="block text-sm font-semibold text-slate-800">Servicio de interés <span class="text-rose-700" aria-hidden="true">*</span></label>
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  aria-describedby="service-hint service-error"
+                  class="mt-2 min-h-12 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-ink focus:border-ocean focus:outline-none focus:ring-4 focus:ring-teal-100"
+                >
+                  <option value="">Selecciona un servicio</option>
+                  <option value="primary-care">Atención primaria</option>
+                  <option value="specialist-consultation">Consulta especializada</option>
+                  <option value="chronic-care">Gestión de enfermedades crónicas</option>
+                  <option value="preventive-health">Programa de salud preventiva</option>
+                </select>
+                <p id="service-hint" class="mt-2 text-xs leading-5 text-slate-600">Selecciona el tema sobre el que quieres recibir información.</p>
+                <p id="service-error" class="mt-1 hidden text-sm font-semibold text-rose-800" aria-live="polite"></p>
+              </div>
+            </fieldset>
+
+            <div id="form-status" class="hidden rounded-xl border px-4 py-3 text-sm font-semibold" role="status" aria-live="polite" tabindex="-1"></div>
+
+            <div class="flex flex-col gap-3 border-t border-slate-200 pt-6 sm:flex-row">
+              <button type="submit" class="inline-flex min-h-12 flex-1 items-center justify-center rounded-full bg-ocean px-6 py-3 font-bold text-white transition hover:bg-teal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-300">
+                Validar solicitud
+              </button>
+              <button type="reset" class="inline-flex min-h-12 items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 font-bold text-ink transition hover:bg-slate-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-slate-300">
+                Limpiar formulario
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="mt-10 border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-7 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p>© 2026 HealthCore. Atención ambulatoria en Estados Unidos y el Reino Unido.</p>
+        <a href="index.html" class="w-fit font-semibold text-ocean underline decoration-teal-300 underline-offset-4 hover:text-teal-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-ocean">Volver al inicio</a>
+      </div>
+    </footer>
+    <script src="validation.js" defer></script>
+  </body>
+</html>

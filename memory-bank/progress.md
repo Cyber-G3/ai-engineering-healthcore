@@ -36,3 +36,12 @@
 - Rama publicada: `feature/agent-memory-bank`. El `git push` desde terminal no pudo autenticar; la misma rama y los seis archivos se publicaron mediante la conexión autenticada de GitHub.
 - Pull Request abierta contra `main`: [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2). No se ha fusionado.
 - Pendiente para el siguiente hito: obtener el archivo original de `00-general-contexts` para cotejar la procedencia exacta del briefing; definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
+
+## Hito — Sitio web público de HealthCore (23/11/2026)
+
+- Rama local preparada desde `main`: `feature/healthcore-public-website`.
+- Se añadieron `uis/website/index.html`, `application.html`, `validation.js`, `validation.test.js`, `README.md` y `QA_MATRIX.md`.
+- El formulario recoge nombre, email, teléfono opcional, ubicación y servicio de interés. Es una propuesta mínima: `BRIEFING.md` no enumera campos y el plan aprobado no se encontró entre los archivos disponibles. No se solicitan datos clínicos y la demo no envía ni almacena datos.
+- Verificaciones: 35 aserciones de validación pasan; `node --check` pasa; comprobaciones estáticas de semántica, etiquetas, enlaces internos, breakpoints Tailwind y JSON-LD pasan; cálculo de contraste de colores pasa. Un servidor HTTP de humo sirvió las tres rutas solicitadas con HTTP 200.
+- Límites del entorno: `npx http-server` falló al consultar interfaces de red (`uv_interface_addresses`); Chrome automatizado no pudo iniciar por restricción de sockets y el navegador conectado no pudo acceder al servidor local. Responsive visual, consola del navegador y Lighthouse quedan sin verificar. No hay URL pública de Codespaces.
+- No se modificó `BRIEFING.md`. Commit, publicación de rama y Pull Request quedan pendientes de revisión del diff.
