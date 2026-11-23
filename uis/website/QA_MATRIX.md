@@ -34,4 +34,4 @@ Alcance: `uis/website` en la rama `feature/healthcore-public-website`. No se mod
 | Responsive real en móvil, tablet y escritorio | Pendiente | La automatización Chromium no pudo arrancar por restricción de sockets del entorno | Requiere probar las vistas a 375, 768 y 1440 px en Codespaces o Chrome local |
 | Lighthouse/PageSpeed ≥80 | Pendiente | No se dispone de URL pública ni navegador automatizable en este entorno | No hay puntuación Lighthouse; no se declara superado |
 | URL pública de Codespaces | Pendiente | No hay un Codespace asociado disponible para reenviar el puerto | Debe generarse al abrir el repositorio en Codespaces y exponer el puerto 3000 |
-| Pull Request | Pendiente | Rama local preparada; todavía no publicada | Se creará después de revisar y publicar el commit |
+| Pull Request | Verificado | Estado consultado después de publicar la rama | PR #4 abierta como borrador contra `main`, sin fusionar |

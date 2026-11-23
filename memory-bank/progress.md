@@ -44,4 +44,6 @@
 - El formulario recoge nombre, email, teléfono opcional, ubicación y servicio de interés. Es una propuesta mínima: `BRIEFING.md` no enumera campos y el plan aprobado no se encontró entre los archivos disponibles. No se solicitan datos clínicos y la demo no envía ni almacena datos.
 - Verificaciones: 35 aserciones de validación pasan; `node --check` pasa; comprobaciones estáticas de semántica, etiquetas, enlaces internos, breakpoints Tailwind y JSON-LD pasan; cálculo de contraste de colores pasa. Un servidor HTTP de humo sirvió las tres rutas solicitadas con HTTP 200.
 - Límites del entorno: `npx http-server` falló al consultar interfaces de red (`uv_interface_addresses`); Chrome automatizado no pudo iniciar por restricción de sockets y el navegador conectado no pudo acceder al servidor local. Responsive visual, consola del navegador y Lighthouse quedan sin verificar. No hay URL pública de Codespaces.
-- No se modificó `BRIEFING.md`. Commit, publicación de rama y Pull Request quedan pendientes de revisión del diff.
+- Commit local: `dee601c` (`Build HealthCore public website and contact form`). El push directo desde terminal no pudo autenticar; se publicó el mismo contenido mediante la conexión GitHub y se cotejaron los SHA de los ocho archivos.
+- Pull Request: [#4](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/4), abierta como borrador contra `main`; estado `open`, `merged=false`. No se hizo merge.
+- No se modificó `BRIEFING.md`. El SHA de la copia del briefing coincide con `main`.
