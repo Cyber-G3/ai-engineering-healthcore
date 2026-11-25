@@ -52,4 +52,7 @@
 - Verificación: el workflow `Repository validation` de la PR #5 terminó en `success` (run 45670254722). Validó whitespace, JSON versionado y que `BRIEFING.md` no cambió.
 - Revisión adicional del árbol de la rama: JSON de Dev Container parsea; todos los enlaces relativos de README, contexto, guía de contribución y docs indexados existen; no aparecen Brasaland, TrackFlow ni Nexova en los README raíz.
 - Pull Request de organización [#5](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/5), abierta contra `main`, sin fusionar.
-- Las reglas administrativas de rama, etiquetas y milestones siguen pendientes de verificación de identidad de GitHub; no se guardaron parcialmente.
+- Configuración administrativa completada tras la verificación de identidad: ruleset activo `protect-main` sobre `main`; PR obligatorio, conversaciones resueltas, pushes forzados bloqueados y borrado de rama restringido. No exige aprobación independiente (no hay una segunda persona revisora configurada) ni check obligatorio todavía; el workflow de validación se hará obligatorio cuando esté integrado en `main`, para no bloquear las PR #3 y #4 abiertas.
+- Etiquetas creadas: `priority:P0/P1/P2`, `type:milestone`, `type:infrastructure`, `area:docs`, `area:agents`, `area:github`, `area:environment`, `status:blocked` y `status:needs-review`; se conservan las etiquetas estándar.
+- Milestones creados sin fechas límite: `01 - Web`, `02 - Programming`, `03 - Backend`, `04 - Telemetry`, `05 - RAG`, `06 - Agents`, `07 - Workflows` y `08 - Real-time`.
+- PR #5 sigue abierta y sin fusionar. El workflow de validación concluyó correctamente en los runs 45670254722 y 45671574193.

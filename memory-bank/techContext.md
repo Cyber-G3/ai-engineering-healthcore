@@ -48,3 +48,7 @@ El paquete `packages/shared` declara `"scripts": {}`. Por tanto, para esta infra
 - `.github/copilot-instructions.md` remite a `AGENTS.md` y reglas activas; no duplica la política completa.
 
 - Verificación de la PR #5: el workflow básico terminó correctamente; revisión de enlaces relativos del contenido de infraestructura sin enlaces rotos. La validación de aplicaciones y pruebas específicas queda condicionada a que los hitos incorporen código y comandos declarados.
+
+- GitHub ruleset `protect-main` está activo y se aplica a `main`: requiere PR y resolución de conversaciones; bloquea force push y borrado. Requiere 0 aprobaciones. Aún no exige checks de estado porque el workflow nuevo no está en `main`; activarlo antes de integrar el workflow podría bloquear PR existentes.
+- Se crearon once etiquetas de clasificación y ocho milestones del curso sin fechas; los nombres y la lista exacta constan en `memory-bank/progress.md`.
+- La PR de organización #5 está abierta y sin fusionar; los dos runs de validación registrados en progreso terminaron en éxito.
