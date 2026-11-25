@@ -2,6 +2,8 @@
 
 Esta carpeta contiene **todos los servicios backend** (APIs y workers en segundo plano) relacionados con la compañía para el proyecto transversal de AI Engineering.
 
+**Nota para HealthCore:** Los ejemplos FastAPI de la plantilla son orientación, no una decisión tecnológica aprobada para HealthCore. Confirma el stack del hito antes de añadir dependencias o servicios.
+
 Cada subcarpeta dentro de `services/` debe corresponder a **un servicio concreto** (por ejemplo `admin-api`, `data-processor-worker`) e incluir su propia documentación técnica y funcional.
 
 - **Propósito principal**: centralizar toda la lógica backend, APIs y consumidores de colas que dan soporte a los casos de uso de la compañía.

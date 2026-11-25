@@ -4,7 +4,7 @@
 
 - Repositorio: `Cyber-G3/ai-engineering-healthcore`; remoto `origin` apunta a ese fork. La rama base era `main` y el clon estaba limpio al inicio.
 - Empresa elegida confirmada: HealthCore, según `company-choice.md`; `BRIEFING.md` contiene el briefing completo y específico de la red de clínicas de EE. UU. y Reino Unido.
-- El archivo fuente original bajo `00-general-contexts` no está incluido en el clon. El historial registra `319f273 Add HealthCore company briefing`; la comparación con la fuente original queda pendiente.
+- El original se localizó en [`4GeeksAcademy/ai-engineering-syllabus/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md`](https://github.com/4GeeksAcademy/ai-engineering-syllabus/blob/fd2da034894ba93ba738559280ccde074ab1d953/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md). Su blob SHA coincide exactamente con el de `BRIEFING.md` (`5158cf167c0e61238bbd5ab023b5364fce92106d`). El historial local registra `319f273 Add HealthCore company briefing`.
 - La plantilla describe los destinos `uis/website`, `uis/backoffice` y `services/`; no se encontraron aplicaciones ni scripts globales.
 - Los README de carpeta recomiendan documentar componentes, no exponer datos sensibles y usar datos sintéticos/anonimizados en evaluación.
 
@@ -19,7 +19,7 @@
 ## Verificaciones
 
 - Inspección de rama, estado y remoto: al inicio, clon limpio en `main` siguiendo `origin/main`; se creó `feature/agent-memory-bank` desde esa base.
-- Briefing: comprobado como contenido completo de HealthCore; no es placeholder. El historial contiene `319f273 Add HealthCore company briefing`. No cotejado byte a byte con `00-general-contexts`, que no está disponible en este clon ni en los directorios locales inspeccionados.
+- Briefing: comprobado como contenido completo de HealthCore; no es placeholder. Cotejado con la fuente oficial en `4GeeksAcademy/ai-engineering-syllabus/content/contexts/00-general-contexts/healthcore-BRIEFING.es.md`; ambos archivos tienen el mismo blob SHA `5158cf167c0e61238bbd5ab023b5364fce92106d`.
 - Rutas de producto: contrastadas con `uis/README.es.md` (sitio público y backoffice) y `services/README.es.md` (APIs y workers). No se crearon aplicaciones ni carpetas de producto.
 - AGENTS: revisión manual confirma lectura inicial de briefing/memoria/reglas, inspección de README/código, cinco pasos ordenados antes del commit y condiciones concretas de consulta.
 - Regla: revisión manual confirma alcance explícito siempre activo y convenciones/condiciones de parada ligadas a HealthCore.
@@ -34,5 +34,25 @@
 - No se crea código de aplicación ni se declaran stacks, comandos o políticas regulatorias que no estén demostrados.
 - Commit de entrega en GitHub: `2aa72f1` (`Add HealthCore agent context and reusable skill`); el árbol remoto fue cotejado y coincide con el commit local `4241816`.
 - Rama publicada: `feature/agent-memory-bank`. El `git push` desde terminal no pudo autenticar; la misma rama y los seis archivos se publicaron mediante la conexión autenticada de GitHub.
-- Pull Request abierta contra `main`: [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2). No se ha fusionado.
-- Pendiente para el siguiente hito: obtener el archivo original de `00-general-contexts` para cotejar la procedencia exacta del briefing; definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
+- La PR [#2](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/2) se fusionó en `main` en `f85d321` (16/11/2026 20:10:50 UTC). No ejecuté la operación de merge; el estado se comprobó después en GitHub.
+- La corrección posterior de procedencia está en la rama publicada y en la PR de seguimiento [#3](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/3), abierta contra `main` y sin fusionar.
+- Pendiente para el siguiente hito: definir decisiones de producto/técnicas solo cuando exista evidencia o aprobación.
+
+
+## Hito — Preparación del monorepo y GitHub (25/11/2026)
+
+- Rama de organización: `chore/healthcore-repository-setup`, creada desde `main` en `f85d3218`.
+- Se aclararon los README raíz en inglés y español para reflejar HealthCore y mantener las rutas de la plantilla; `CONTEXT.md` funciona como índice de fuentes en lugar de duplicar el briefing.
+- Se incorporaron contribución Ask → Plan → Agent → Review, instrucciones ligeras para Copilot, plantillas de PR/Issues y validación básica de pull requests.
+- Se añadieron exclusiones locales mínimas a `.gitignore`; el briefing oficial se protege en CI y no se edita.
+- Codespaces conserva Python 3.12, Node.js 22, 4Geeks Student, GitHub CLI y Jupyter; ya no instala herramientas de versiones flotantes en cada creación y crea un venv local sin dependencias de proyecto.
+- La estructura de documentación indexa arquitectura, ADRs, hitos, APIs, interfaces y pruebas; no se crearon documentos vacíos ni aplicaciones nuevas.
+- Las correcciones de procedencia de la PR #3 se conservaron en la base de este cambio. La PR #3 existente no se fusionó ni se modificó.
+- Sitio público de la PR #4 y sus archivos permanecen fuera del diff.
+- Verificación: el workflow `Repository validation` de la PR #5 terminó en `success` (run 45670254722). Validó whitespace, JSON versionado y que `BRIEFING.md` no cambió.
+- Revisión adicional del árbol de la rama: JSON de Dev Container parsea; todos los enlaces relativos de README, contexto, guía de contribución y docs indexados existen; no aparecen Brasaland, TrackFlow ni Nexova en los README raíz.
+- Pull Request de organización [#5](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/5), abierta contra `main`, sin fusionar.
+- Configuración administrativa completada tras la verificación de identidad: ruleset activo `protect-main` sobre `main`; PR obligatorio, conversaciones resueltas, pushes forzados bloqueados y borrado de rama restringido. No exige aprobación independiente (no hay una segunda persona revisora configurada) ni check obligatorio todavía; el workflow de validación se hará obligatorio cuando esté integrado en `main`, para no bloquear las PR #3 y #4 abiertas.
+- Etiquetas creadas: `priority:P0/P1/P2`, `type:milestone`, `type:infrastructure`, `area:docs`, `area:agents`, `area:github`, `area:environment`, `status:blocked` y `status:needs-review`; se conservan las etiquetas estándar.
+- Milestones creados sin fechas límite: `01 - Web`, `02 - Programming`, `03 - Backend`, `04 - Telemetry`, `05 - RAG`, `06 - Agents`, `07 - Workflows` y `08 - Real-time`.
+- PR #5 sigue abierta y sin fusionar. El workflow de validación concluyó correctamente en los runs 45670254722 y 45671574193.

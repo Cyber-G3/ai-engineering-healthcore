@@ -36,4 +36,19 @@ El paquete `packages/shared` declara `"scripts": {}`. Por tanto, para esta infra
 - Mantener interfaces en `uis/`, APIs/servicios en `services/`, datos y pipelines en las rutas `data/`, y evitar crear una estructura paralela.
 - Los README de datos prohíben implícitamente tratar datos sensibles como fixtures de repositorio: `data/raw/README.es.md` recomienda evitar subirlos y `data/eval/README.es.md` recomienda datos sintéticos o anonimizados.
 - La plantilla no define todavía frameworks de producto, bases de datos, despliegue, CI, arquitectura detallada de servicios ni comandos verificables. Decidirlos solo cuando un hito y sus README/propuesta técnica aporten evidencia.
-- El README raíz conserva referencias de plantilla a `CONTEXT.md` y empresas Brasaland/TrackFlow/Nexova; para el dominio actual, la elección y contexto HealthCore están en `BRIEFING.md`, `company-choice.md` y `CONTEXT.es.md`. No se cambió el README genérico en este hito.
+- Los README raíz identifican HealthCore y enlazan las fuentes canónicas. `CONTEXT.md` solo orienta a las fuentes para evitar duplicar el briefing.
+
+
+## Preparación del repositorio (25/11/2026)
+
+- Codespaces declara Python 3.12 y Node.js 22, la extensión 4Geeks Student, Jupyter, Python, GitHub CLI, Docker tooling y herramientas habituales de VS Code.
+- El comando de creación prepara un entorno virtual Python sin instalar dependencias de proyecto. Las dependencias deben pertenecer a cada proyecto/milestone y quedar declaradas con sus locks; no hay manifiesto raíz común.
+- `.gitignore` excluye entornos locales, cachés, logs y archivos típicos de secretos, sin ignorar datos de curso de forma general.
+- CI valida whitespace, JSON versionado y que los diffs de PR no alteren `BRIEFING.md`. No se configura build/test global sin código ejecutable o comandos de proyecto aprobados.
+- `.github/copilot-instructions.md` remite a `AGENTS.md` y reglas activas; no duplica la política completa.
+
+- Verificación de la PR #5: el workflow básico terminó correctamente; revisión de enlaces relativos del contenido de infraestructura sin enlaces rotos. La validación de aplicaciones y pruebas específicas queda condicionada a que los hitos incorporen código y comandos declarados.
+
+- GitHub ruleset `protect-main` está activo y se aplica a `main`: requiere PR y resolución de conversaciones; bloquea force push y borrado. Requiere 0 aprobaciones. Aún no exige checks de estado porque el workflow nuevo no está en `main`; activarlo antes de integrar el workflow podría bloquear PR existentes.
+- Se crearon once etiquetas de clasificación y ocho milestones del curso sin fechas; los nombres y la lista exacta constan en `memory-bank/progress.md`.
+- La PR de organización #5 está abierta y sin fusionar; los dos runs de validación registrados en progreso terminaron en éxito.

@@ -13,10 +13,6 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/sshd:1": {}
   },
-  "containerEnv": {
-    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
-    "UV_LINK_MODE": "copy"
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -37,10 +33,7 @@
       }
     }
   },
-  "postCreateCommand": {
-  "js": "corepack enable && corepack prepare pnpm@latest --activate && if [ -f package.json ]; then pnpm install; fi",
-  "python": "python -m pip install --upgrade pip uv && if [ -f pyproject.toml ]; then uv sync && uv cache clean; fi"
-  },
+  "postCreateCommand": "python -m venv .venv",
   "forwardPorts": [3000, 8000, 5678],
   "remoteUser": "vscode"
 }

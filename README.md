@@ -1,9 +1,9 @@
-# AI Engineering Company Project — Student Template
+# AI Engineering Project — HealthCore
 
 [![4Geeks Academy](https://img.shields.io/badge/4Geeks-Academy-blue)](https://4geeksacademy.com)
 [![AI Engineering](https://img.shields.io/badge/track-AI%20Engineering-green)](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia)
 
-_Base template for transversal projects in the AI Engineering Career Program — 4Geeks Academy._
+_Monorepo for the HealthCore project across the AI Engineering Career Program — 4Geeks Academy._
 
 _Estas instrucciones tambien estan disponibles en [espanol](./README.es.md)._
 
@@ -11,24 +11,21 @@ _Estas instrucciones tambien estan disponibles en [espanol](./README.es.md)._
 
 ## Purpose
 
-This repository is the **starter template** for transversal projects. You will work on real company scenarios (Brasaland, TrackFlow, Nexova), building deliverables that map to course milestones (Web, Programming, Backend, Telemetry, RAG, Agents, Workflows, Real-time).
+This repository is the continuing monorepo for the **HealthCore** project across the AI Engineering course milestones. It preserves the original 4Geeks folder routes and adds only the work approved for each milestone.
 
-- Create a template from this repository.
-- Replace the placeholder `CONTEXT.md` with your assigned company context.
-- Use `skills/` and the directory-level `README.md` files as working guidance.
-
----
+- Use `BRIEFING.md` as the official company brief; keep it unchanged.
+- Use `company-choice.md` for the selected project focus and `CONTEXT.es.md` for the concise Spanish domain summary.
+- Follow `AGENTS.md`, `.agents/rules/` and the current state in `memory-bank/`.
+- Work from this repository and its existing folders. Do not create a second repository or parallel monorepo structure.
 
 ## How to start
 
-1. **Use this repository as a template** and create your own project repo.
-2. **Clone** your repository (or open it in Codespaces).
-3. **Replace** `CONTEXT.md` with the full context for your assigned company.
-4. **Read this folder guide** and open the `README.md` of the folder you are working in.
-5. **Start implementing** in the right folder — do not dump everything in the root.
-6. **Document** what you add: each new app, service, agent, or pipeline gets a subfolder + README.
-
----
+1. Open this repository or its Codespace on the current working branch.
+2. Read `AGENTS.md`, `BRIEFING.md`, `CONTEXT.es.md`, `company-choice.md` and the current `memory-bank/` files.
+3. Check the milestone, branch and current Git status before editing.
+4. Read the README in the affected folder and keep work in the template's existing route.
+5. Use a `feature/`, `fix/`, `docs/` or `chore/` branch and submit a Pull Request to `main`.
+6. Document the change, verification and remaining questions in the relevant project README or Memory Bank.
 
 ## How to think about this monorepo
 
@@ -49,15 +46,11 @@ You are building **one company** across many milestones and projects. Each top-l
 
 ---
 
-## Current status of the template
+## Current repository status
 
-> 💡 This repository currently provides a **base folder structure and documentation skeleton** only. It does not include runnable apps or global scripts yet.
->
-> - `CONTEXT.md` is a placeholder and must be replaced with your assigned company context.
-> - There is no root `AGENTS.md` yet.
-> - Shared package metadata exists in `packages/shared/package.json` (`@repo/shared-types`), but no workspace runner is configured at root.
+The repository contains the HealthCore brief, course folder guides, agent instructions, reusable agent guidance, Memory Bank and the shared-types package skeleton. The public website is being developed on a separate open Pull Request; check GitHub before assuming that branch's files are in `main`.
 
----
+No root application runner or universal dependency set has been approved. Empty template folders remain reserved for milestones and should stay empty until work requires them. The Codespaces definition declares Python 3.12, Node.js 22 and the 4Geeks Student extension. See `.devcontainer/devcontainer.json`.
 
 ## Folder guide — what goes where
 
@@ -67,8 +60,8 @@ Read the linked `README.md` inside each folder before you start coding there.
 
 | Path                         | Purpose                                                                   | What you do here                                                                                              |
 | ---------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [`CONTEXT.md`](./CONTEXT.md) | Single source of truth for your company (Brasaland, TrackFlow, or Nexova) | **First step:** copy your assigned company briefing here so every app, agent, and prompt uses the same domain |
-| `docker-compose.yml`         | Local dev orchestration for the whole stack                               | Keep at repo root — wires `services/`, databases, and other containers from one place                         |
+| [`CONTEXT.md`](./CONTEXT.md) | Pointer to the current HealthCore sources | Start from `BRIEFING.md`, `company-choice.md` and `CONTEXT.es.md`; do not copy the official brief |
+| `.devcontainer/devcontainer.json` | Reproducible Codespaces environment | Python 3.12, Node.js 22 and course extensions are declared here |
 | `README.md` / `README.es.md` | This guide                                                                | Orientation — you are here                                                                                    |
 
 ### `uis/` — user interfaces
