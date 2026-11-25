@@ -46,3 +46,5 @@ El paquete `packages/shared` declara `"scripts": {}`. Por tanto, para esta infra
 - `.gitignore` excluye entornos locales, cachés, logs y archivos típicos de secretos, sin ignorar datos de curso de forma general.
 - CI valida whitespace, JSON versionado y que los diffs de PR no alteren `BRIEFING.md`. No se configura build/test global sin código ejecutable o comandos de proyecto aprobados.
 - `.github/copilot-instructions.md` remite a `AGENTS.md` y reglas activas; no duplica la política completa.
+
+- Verificación de la PR #5: el workflow básico terminó correctamente; revisión de enlaces relativos del contenido de infraestructura sin enlaces rotos. La validación de aplicaciones y pruebas específicas queda condicionada a que los hitos incorporen código y comandos declarados.

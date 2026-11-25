@@ -49,4 +49,7 @@
 - La estructura de documentación indexa arquitectura, ADRs, hitos, APIs, interfaces y pruebas; no se crearon documentos vacíos ni aplicaciones nuevas.
 - Las correcciones de procedencia de la PR #3 se conservaron en la base de este cambio. La PR #3 existente no se fusionó ni se modificó.
 - Sitio público de la PR #4 y sus archivos permanecen fuera del diff.
-- Validación final de este hito: pendiente de ejecutar y registrar antes de abrir la PR de organización.
+- Verificación: el workflow `Repository validation` de la PR #5 terminó en `success` (run 45670254722). Validó whitespace, JSON versionado y que `BRIEFING.md` no cambió.
+- Revisión adicional del árbol de la rama: JSON de Dev Container parsea; todos los enlaces relativos de README, contexto, guía de contribución y docs indexados existen; no aparecen Brasaland, TrackFlow ni Nexova en los README raíz.
+- Pull Request de organización [#5](https://github.com/Cyber-G3/ai-engineering-healthcore/pull/5), abierta contra `main`, sin fusionar.
+- Las reglas administrativas de rama, etiquetas y milestones siguen pendientes de verificación de identidad de GitHub; no se guardaron parcialmente.
