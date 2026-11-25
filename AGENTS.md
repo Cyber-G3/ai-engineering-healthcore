@@ -7,6 +7,15 @@
 3. Consulta las reglas activas de `.agents/rules/` antes de proponer o ejecutar cambios.
 4. Inspecciona el estado Git y los archivos de la carpeta que vas a cambiar. Lee su README y el código existente antes de modificarla.
 
+## Flujo Ask → Plan → Agent → Review
+
+1. **Ask:** clarify missing inputs and inspect the relevant project sources; separate documented facts, hypotheses and approved decisions.
+2. **Plan:** state the smallest milestone-scoped change, affected paths, risks and verification before editing.
+3. **Agent:** implement only the approved plan in the existing repository routes; do not add a product app, service, dependency or policy just because a folder is available.
+4. **Review:** inspect the complete diff, run documented checks, report limits, and update Memory Bank when facts, decisions, verification or progress change.
+
+Use the canonical sources without copying them into new files: `BRIEFING.md` for official facts, `company-choice.md` for the chosen proposal, `CONTEXT.es.md` for the concise domain view, and `memory-bank/` for technical state and continuity. Explicitly label a claim as a documented fact, hypothesis, or approved decision.
+
 ## Ubicación de producto
 
 Respeta el mapa de la plantilla: web pública en `uis/website`, aplicación interna en `uis/backoffice`, y APIs/servicios backend en `services/`. Lee el README correspondiente antes de crear o modificar cualquiera de esas áreas. Mantén datos y pipelines en las rutas `data/` descritas por la plantilla; no crees un árbol alternativo de aplicaciones.

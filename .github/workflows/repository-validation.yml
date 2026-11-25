@@ -1,0 +1,32 @@
+name: Repository validation
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check whitespace errors
+        run: git diff --check "origin/${{ github.base_ref }}...HEAD"
+
+      - name: Protect official HealthCore brief
+        run: git diff --exit-code "origin/${{ github.base_ref }}...HEAD" -- BRIEFING.md
+
+      - name: Validate tracked JSON files
+        shell: bash
+        run: |
+          mapfile -d '' files < <(git ls-files -z '*.json')
+          for file in "${files[@]}"; do
+            python -m json.tool "$file" >/dev/null
+          done

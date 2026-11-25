@@ -1,9 +1,9 @@
-# Proyecto de Compañía - Ingeniería de IA — Plantilla para estudiantes
+# Proyecto de Ingeniería de IA — HealthCore
 
 [![4Geeks Academy](https://img.shields.io/badge/4Geeks-Academy-blue)](https://4geeksacademy.com)
 [![AI Engineering](https://img.shields.io/badge/track-AI%20Engineering-green)](https://4geeksacademy.com/es/programas-de-carrera/ingenieria-ia)
 
-_Plantilla base para proyectos transversales del Programa de Carrera en Ingeniería de IA — 4Geeks Academy._
+_Monorepo del proyecto HealthCore a lo largo del Programa de Ingeniería de IA — 4Geeks Academy._
 
 _These instructions are also available in [English](./README.md)._
 
@@ -11,24 +11,21 @@ _These instructions are also available in [English](./README.md)._
 
 ## Propósito
 
-Este repositorio es la **plantilla de inicio** para los proyectos transversales. Trabajarás con escenarios de empresas reales (Brasaland, TrackFlow, Nexova) construyendo entregables que se corresponden con los hitos del curso (Web, Programación, Backend, Telemetría, RAG, Agentes, Workflows, Tiempo real).
+Este repositorio es el monorepo continuo del proyecto **HealthCore** para los hitos del curso de Ingeniería de IA. Conserva las rutas originales de la plantilla de 4Geeks y solo incorpora trabajo aprobado para cada hito.
 
-- Crea una plantilla a partir de este repositorio.
-- Reemplaza el `CONTEXT.md` placeholder por el contexto de tu empresa asignada.
-- Usa `skills/` y los `README.md` por carpeta como guía de trabajo.
-
----
+- Usa `BRIEFING.md` como briefing oficial de la empresa; mantenlo intacto.
+- Usa `company-choice.md` para el foco elegido y `CONTEXT.es.md` como resumen breve del dominio.
+- Sigue `AGENTS.md`, `.agents/rules/` y el estado actual de `memory-bank/`.
+- Trabaja en este repositorio y sus rutas existentes. No crees otro repositorio ni una estructura monorepo paralela.
 
 ## Cómo empezar
 
-1. **Usa este repositorio como plantilla** y crea tu propio repo de proyecto.
-2. **Clona** tu repositorio (o ábrelo en Codespaces).
-3. **Reemplaza** `CONTEXT.md` con el contexto completo de tu empresa asignada.
-4. **Lee esta guía de carpetas** y abre el `README.md` de la carpeta en la que estés trabajando.
-5. **Empieza a implementar** en la carpeta correcta — no tires todo en la raíz.
-6. **Documenta** lo que añadas: cada app, servicio, agente o pipeline nuevo lleva subcarpeta + README.
-
----
+1. Abre este repositorio o su Codespace en la rama de trabajo actual.
+2. Lee `AGENTS.md`, `BRIEFING.md`, `CONTEXT.es.md`, `company-choice.md` y los archivos vigentes de `memory-bank/`.
+3. Comprueba el hito, la rama y el estado de Git antes de editar.
+4. Lee el README de la carpeta afectada y mantén el trabajo en la ruta original de la plantilla.
+5. Usa una rama `feature/`, `fix/`, `docs/` o `chore/` y abre una Pull Request contra `main`.
+6. Documenta el cambio, su verificación y las preguntas pendientes en el README del proyecto o en Memory Bank.
 
 ## Cómo entender este monorepo
 
@@ -49,15 +46,11 @@ Estás construyendo **una sola empresa** a lo largo de muchos hitos y proyectos.
 
 ---
 
-## Estado actual de la plantilla
+## Estado actual del repositorio
 
-> 💡 Actualmente el repositorio ofrece solo una **estructura base de carpetas y documentación**. Todavía no incluye aplicaciones ejecutables ni scripts globales en la raíz.
->
-> - `CONTEXT.md` es un placeholder y debe sustituirse por el contexto de la empresa asignada.
-> - No existe todavía un `AGENTS.md` en la raíz.
-> - Existe metadata del paquete compartido en `packages/shared/package.json` (`@repo/shared-types`), pero aún no hay runner de workspace en raíz.
+El repositorio contiene el briefing de HealthCore, las guías de carpetas del curso, las instrucciones para agentes, una skill reutilizable, Memory Bank y el esqueleto del paquete de tipos compartidos. El sitio público se está desarrollando en otra Pull Request abierta; comprueba GitHub antes de asumir que sus archivos están en `main`.
 
----
+No se ha aprobado un runner global ni un conjunto universal de dependencias. Las carpetas vacías de la plantilla quedan reservadas para los hitos y deben seguir vacías hasta que el trabajo las necesite. Codespaces declara Python 3.12, Node.js 22 y la extensión 4Geeks Student en `.devcontainer/devcontainer.json`.
 
 ## Guía de carpetas — qué va en cada una
 
@@ -67,8 +60,8 @@ Lee el `README.md` enlazado dentro de cada carpeta antes de empezar a programar 
 
 | Ruta                         | Propósito                                                            | Qué haces aquí                                                                                               |
 | ---------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [`CONTEXT.md`](./CONTEXT.md) | Fuente única de verdad de tu empresa (Brasaland, TrackFlow o Nexova) | **Primer paso:** copia aquí el briefing de tu empresa para que apps, agentes y prompts usen el mismo dominio |
-| `docker-compose.yml`         | Orquestación local de todo el stack                                  | Mantener en la raíz del repo — conecta `services/`, bases de datos y otros contenedores desde un solo lugar  |
+| [`CONTEXT.md`](./CONTEXT.md) | Referencia a las fuentes actuales de HealthCore | Empieza por `BRIEFING.md`, `company-choice.md` y `CONTEXT.es.md`; no copies el briefing oficial |
+| `.devcontainer/devcontainer.json` | Entorno reproducible de Codespaces | Declara Python 3.12, Node.js 22 y las extensiones del curso |
 | `README.md` / `README.es.md` | Esta guía                                                            | Orientación — estás aquí                                                                                     |
 
 ### `uis/` — interfaces de usuario

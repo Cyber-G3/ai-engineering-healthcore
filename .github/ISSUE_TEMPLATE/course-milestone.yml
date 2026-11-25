@@ -1,0 +1,42 @@
+name: Course milestone / feature
+description: Propose a scoped deliverable for a HealthCore course milestone.
+title: "[milestone]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: milestone
+    attributes:
+      label: Course milestone
+      description: Use the milestone name from the current 4Geeks materials.
+      placeholder: "e.g. Agents"
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the user or learning outcome without including patient details.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Source and evidence
+      description: Link the relevant brief, course instruction, or approved decision. Separate facts from hypotheses.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Data and scope
+      options:
+        - label: This issue contains no patient data, credentials, or secrets.
+          required: true
+        - label: This request does not change the official BRIEFING.md.
+          required: true
